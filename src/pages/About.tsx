@@ -209,18 +209,18 @@ const About = () => (
 
       <SectionHeading title="Certifications" />
 
-      <div className="grid md:grid-cols-2 gap-8 mb-16">
+      <div className="grid md:grid-cols-3 gap-8 mb-16">
         {certifications.map((c, i) => (
           <GlassCard key={i} className="overflow-hidden">
 
             <img
               src={c.image}
               alt={c.title}
-              className="w-full h-64 object-cover rounded-xl mb-4 hover:scale-105 transition duration-300"
+              className="w-full h-60 object-cover rounded-xl mb-4 hover:scale-105 transition duration-300"
             />
 
             <div className="flex items-start gap-3">
-              <Award className="text-primary" size={24} />
+              <Award className="text-primary" size={22} />
 
               <div>
                 <h3 className="font-semibold text-lg text-foreground">{c.title}</h3>
