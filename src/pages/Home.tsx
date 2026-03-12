@@ -61,7 +61,7 @@ const Home = () => {
           className="mx-auto mb-6 w-40 h-40 sm:w-56 sm:h-56 md:w-64 md:h-64 rounded-full overflow-hidden shadow-2xl shadow-primary/40"
         >
           <img
-            src="/profile.jpg"
+            src="/Profile1.jpg"
             alt="Sriya Sree"
             className="w-full h-full object-cover object-center rounded-full"
           />
