@@ -19,14 +19,46 @@ const nptel = [
 /* CERTIFICATIONS */
 
 const certifications = [
-  { title: "Responsive Web Design", org: "FreeCodeCamp" },
-  { title: "Python Certification", org: "FreeCodeCamp" },
-  { title: "Python Essentials 1", org: "Cisco Networking Academy" },
-  { title: "Python Essentials 2", org: "Cisco Networking Academy" },
-  { title: "Artificial Intelligence & Machine Learning Projects", org: "Great Learning" },
-  { title: "Machine Learning Certification", org: "Analytics Vidhya" },
-  { title: "Network Support and Security", org: "Cisco Networking Academy" },
-  { title: "Networking Basics", org: "Cisco Networking Academy" },
+  {
+    title: "Responsive Web Design",
+    org: "FreeCodeCamp",
+    image: "/images/responsive-web-design.jpg",
+  },
+  {
+    title: "Python Certification",
+    org: "FreeCodeCamp",
+    image: "/images/python-certification.jpg",
+  },
+  {
+    title: "Python Essentials 1",
+    org: "Cisco Networking Academy",
+    image: "/images/python-essentials1.jpg",
+  },
+  {
+    title: "Python Essentials 2",
+    org: "Cisco Networking Academy",
+    image: "/images/python-essentials2.jpg",
+  },
+  {
+    title: "Artificial Intelligence & Machine Learning Projects",
+    org: "Great Learning",
+    image: "/images/ai-ml-projects.jpg",
+  },
+  {
+    title: "Machine Learning Certification",
+    org: "Analytics Vidhya",
+    image: "/images/machine-learning.jpg",
+  },
+  {
+    title: "Network Support and Security",
+    org: "Cisco Networking Academy",
+    image: "/images/network-support.jpg",
+  },
+  {
+    title: "Networking Basics",
+    org: "Cisco Networking Academy",
+    image: "/images/networking-basics.jpg",
+  },
 ];
 
 /* ACHIEVEMENTS */
@@ -96,7 +128,6 @@ const About = () => (
         title="About Me"
         subtitle="My journey, achievements, certifications, and learning path"
       />
-     
 
       {/* STORY */}
 
@@ -174,20 +205,29 @@ const About = () => (
         ))}
       </div>
 
-      {/* CERTIFICATIONS */}
+      {/* CERTIFICATIONS WITH IMAGES */}
 
       <SectionHeading title="Certifications" />
 
       <div className="grid md:grid-cols-3 gap-5 mb-16">
         {certifications.map((c, i) => (
-          <GlassCard key={i}>
+          <GlassCard key={i} className="overflow-hidden">
+
+            <img
+              src={c.image}
+              alt={c.title}
+              className="w-full h-36 object-cover rounded-lg mb-3"
+            />
+
             <div className="flex items-start gap-3">
               <Award className="text-primary" size={20} />
+
               <div>
                 <h3 className="font-semibold text-foreground">{c.title}</h3>
                 <p className="text-sm text-foreground">{c.org}</p>
               </div>
             </div>
+
           </GlassCard>
         ))}
       </div>
