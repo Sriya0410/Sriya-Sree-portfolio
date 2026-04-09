@@ -69,12 +69,12 @@ const achievements = [
     detail: "Presented innovative project and secured third place.",
   },
   {
-    title: "Internship Opportunity Secured",
-    detail: "Selected for internship after technical workshop.",
+    title: "Workshop at IIT Hyderabad",
+    detail: "Participated in a technical workshop at IIT Hyderabad and enhanced practical technical knowledge.",
   },
   {
-    title: "Workshop at IIT Hyderabad",
-    detail: "Participated in workshop and secured internship opportunity.",
+    title: "Internship Opportunity Secured",
+    detail: "Selected for an internship opportunity based on performance in a technical workshop.",
   },
 ];
 
@@ -90,8 +90,8 @@ const extracurricular = [
     detail: "Managed coordination of college cultural programs.",
   },
   {
-    title: "Participant – MERNVERSE Hackathon",
-    detail: "Participated in MERN stack hackathon event.",
+    title: "Coordinator – MERNVERSE Hackathon",
+    detail: "Coordinated event activities and supported the smooth execution of the MERN stack hackathon.",
   },
 ];
 
