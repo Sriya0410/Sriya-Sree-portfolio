@@ -1,7 +1,15 @@
 import { motion } from "framer-motion";
 import SectionHeading from "@/components/SectionHeading";
 import GlassCard from "@/components/GlassCard";
-import { Award, BookOpen, Heart, Lightbulb, Target, Trophy, Users } from "lucide-react";
+import {
+  Award,
+  BookOpen,
+  Heart,
+  Lightbulb,
+  Target,
+  Trophy,
+  Users,
+} from "lucide-react";
 
 /* NPTEL COURSES */
 
@@ -19,6 +27,11 @@ const nptel = [
 /* CERTIFICATIONS */
 
 const certifications = [
+  {
+    title: "JavaScript Developer Certification",
+    org: "freeCodeCamp",
+    image: "/images/javascript-certification.png",
+  },
   {
     title: "Responsive Web Design",
     org: "FreeCodeCamp",
@@ -70,11 +83,13 @@ const achievements = [
   },
   {
     title: "Workshop at IIT Hyderabad",
-    detail: "Participated in a technical workshop at IIT Hyderabad and enhanced practical technical knowledge.",
+    detail:
+      "Participated in a technical workshop at IIT Hyderabad and enhanced practical technical knowledge.",
   },
   {
-    title: "Internship Opportunity Secured",
-    detail: "Selected for an internship opportunity based on performance in a technical workshop.",
+    title: "4-Week Data Science Internship",
+    detail:
+      "Successfully completed a 4-week Summer Internship Programme in Data Science 2026 at IDEAS-TIH, Indian Statistical Institute Kolkata, with an Outstanding performance grade.",
   },
 ];
 
@@ -91,7 +106,8 @@ const extracurricular = [
   },
   {
     title: "Coordinator – MERNVERSE Hackathon",
-    detail: "Coordinated event activities and supported the smooth execution of the MERN stack hackathon.",
+    detail:
+      "Coordinated event activities and supported the smooth execution of the MERN stack hackathon.",
   },
 ];
 
@@ -123,7 +139,6 @@ const traits = [
 const About = () => (
   <div className="relative z-10 min-h-screen pt-24 pb-10 px-4">
     <div className="max-w-6xl mx-auto">
-
       <SectionHeading
         title="About Me"
         subtitle="My journey, achievements, certifications, and learning path"
@@ -138,17 +153,20 @@ const About = () => (
         className="glass p-8 rounded-2xl mb-16 glow-border"
       >
         <p className="text-foreground leading-relaxed mb-4">
-          I am a Computer Science student passionate about building innovative
-          solutions and exploring modern technologies. My journey started with
-          curiosity for programming and gradually evolved into full-stack
-          development, machine learning, and project development.
-        </p>
+  I am a Computer Science student with a strong interest in building meaningful
+  digital solutions that combine creativity, logic, and modern technology. My
+  journey began with curiosity for programming and gradually expanded into
+  full-stack development, especially the MERN Stack, along with machine
+  learning and real-world project development.
+</p>
 
-        <p className="text-foreground leading-relaxed">
-          I enjoy transforming ideas into real applications and continuously
-          improving my technical skills through certifications, workshops,
-          hackathons, and academic learning.
-        </p>
+<p className="text-foreground leading-relaxed">
+  I enjoy creating practical applications using technologies like MongoDB,
+  Express.js, React.js, and Node.js, while also exploring AI and machine
+  learning concepts. I believe in learning by doing, so I continuously improve
+  my skills through projects, certifications, workshops, hackathons, and
+  hands-on academic learning.
+</p>
       </motion.div>
 
       {/* ACHIEVEMENTS */}
@@ -160,6 +178,7 @@ const About = () => (
           <GlassCard key={i}>
             <div className="flex items-start gap-3">
               <Trophy className="text-primary" size={20} />
+
               <div>
                 <h3 className="font-semibold text-foreground">{a.title}</h3>
                 <p className="text-sm text-foreground">{a.detail}</p>
@@ -168,6 +187,8 @@ const About = () => (
           </GlassCard>
         ))}
       </div>
+
+      
 
       {/* EXTRA ACTIVITIES */}
 
@@ -178,6 +199,7 @@ const About = () => (
           <GlassCard key={i}>
             <div className="flex items-start gap-3">
               <Users className="text-primary" size={20} />
+
               <div>
                 <h3 className="font-semibold text-foreground">{e.title}</h3>
                 <p className="text-sm text-foreground">{e.detail}</p>
@@ -196,8 +218,11 @@ const About = () => (
           <GlassCard key={i}>
             <div className="flex items-start gap-3">
               <BookOpen className="text-primary" size={20} />
+
               <div>
-                <h3 className="font-semibold text-foreground">{course.title}</h3>
+                <h3 className="font-semibold text-foreground">
+                  {course.title}
+                </h3>
                 <p className="text-sm text-foreground">{course.detail}</p>
               </div>
             </div>
@@ -212,7 +237,6 @@ const About = () => (
       <div className="grid md:grid-cols-3 gap-8 mb-16">
         {certifications.map((c, i) => (
           <GlassCard key={i} className="overflow-hidden">
-
             <img
               src={c.image}
               alt={c.title}
@@ -223,14 +247,29 @@ const About = () => (
               <Award className="text-primary" size={22} />
 
               <div>
-                <h3 className="font-semibold text-lg text-foreground">{c.title}</h3>
+                <h3 className="font-semibold text-lg text-foreground">
+                  {c.title}
+                </h3>
                 <p className="text-sm text-foreground">{c.org}</p>
               </div>
             </div>
-
           </GlassCard>
         ))}
       </div>
+
+      {/* INTERNSHIP CERTIFICATE */}
+
+<SectionHeading title="Internship Certificate" />
+
+<div className="mb-16 flex justify-center">
+  <GlassCard className="overflow-hidden max-w-2xl w-full">
+    <img
+      src="/images/ideastih-internship.jpg"
+      alt="Internship Certificate"
+      className="w-full max-h-[560px] object-contain rounded-xl"
+    />
+  </GlassCard>
+</div>
 
       {/* PERSONAL TRAITS */}
 
@@ -249,7 +288,6 @@ const About = () => (
           </GlassCard>
         ))}
       </div>
-
     </div>
   </div>
 );

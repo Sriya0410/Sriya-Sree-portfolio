@@ -14,9 +14,11 @@ const softSkills = [
 
 const expertise = [
   "Problem Solving & Algorithms",
-  "Backend Development",
+  "MERN Stack Development",
   "Full Stack Development",
+  "Backend Development",
   "Database Design",
+  "Machine Learning",
   "Data Analytics (Power BI)",
   "Team Collaboration",
 ];
@@ -31,14 +33,12 @@ const Skills = () => {
   return (
     <div className="relative z-10 min-h-screen pt-24 pb-10 px-4">
       <div className="max-w-6xl mx-auto">
-
         <SectionHeading
           title="Skills"
           subtitle="Technologies, strengths, and areas where I excel"
         />
 
         <div className="grid md:grid-cols-3 gap-8">
-
           {/* Technical Skills */}
 
           <GlassCard className="p-8 min-h-[320px]">
@@ -50,52 +50,70 @@ const Skills = () => {
             </div>
 
             <div className="space-y-4 text-white text-sm">
-
               <p>
                 <span className="font-semibold text-primary/70">
                   Programming Languages:
                 </span>{" "}
-                Python, Java, C, C++, SQL
+                Python, Java, JavaScript, C, C++, SQL
               </p>
 
               <p>
                 <span className="font-semibold text-primary/70">
                   Core Concepts:
                 </span>{" "}
-                Data Structures & Algorithms, OOP, DBMS, OS
+                Data Structures & Algorithms, OOP, DBMS, Operating Systems
               </p>
 
               <p>
                 <span className="font-semibold text-primary/70">
                   Web Technologies:
                 </span>{" "}
-                HTML, CSS
+                HTML, CSS, JavaScript, React.js
+              </p>
+
+              <p>
+                <span className="font-semibold text-primary/70">
+                  MERN Stack:
+                </span>{" "}
+                MongoDB, Express.js, React.js, Node.js
               </p>
 
               <p>
                 <span className="font-semibold text-primary/70">
                   Backend:
                 </span>{" "}
-                REST APIs, JSP, MySQL, PHP Server
+                REST APIs, Node.js, Express.js, JSP, MySQL, PHP Server
+              </p>
+
+              <p>
+                <span className="font-semibold text-primary/70">
+                  Databases:
+                </span>{" "}
+                MySQL, MongoDB
+              </p>
+
+              <p>
+                <span className="font-semibold text-primary/70">
+                  AI & ML:
+                </span>{" "}
+                Machine Learning, Data Preprocessing, Model Training, Python ML Libraries
               </p>
 
               <p>
                 <span className="font-semibold text-primary/70">
                   Cloud:
                 </span>{" "}
-                AWS (EC2, S3), Cloud Fundamentals
+                AWS EC2, AWS S3, Cloud Fundamentals
               </p>
 
               <p>
                 <span className="font-semibold text-primary/70">
                   Tools:
                 </span>{" "}
-                Git, GitHub, Power BI
+                Git, GitHub, VS Code, Power BI
               </p>
-
             </div>
           </GlassCard>
-
 
           {/* Soft Skills */}
 
@@ -114,7 +132,6 @@ const Skills = () => {
             </div>
           </GlassCard>
 
-
           {/* Areas of Expertise */}
 
           <GlassCard className="p-8 min-h-[320px]">
@@ -131,7 +148,6 @@ const Skills = () => {
               ))}
             </div>
           </GlassCard>
-
         </div>
       </div>
     </div>
